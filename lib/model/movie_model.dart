@@ -3,10 +3,12 @@ class Movie {
   final String imageUrl;
   final bool hasEpisode;
   final String? seasonName;
+  final double? movieProgress;
 
   Movie(
       {required this.title,
       required this.imageUrl,
       required this.hasEpisode,
-      this.seasonName});
+      this.seasonName,
+      this.movieProgress});
 }

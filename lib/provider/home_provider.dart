@@ -4,6 +4,12 @@ import '../model/movie_model.dart';
 
 class HomeProvider with ChangeNotifier {
   String selectedCategory = "All";
+  int selectedIndex = 0;
+
+  void onItemTapped(int index) {
+    selectedIndex = index;
+    notifyListeners();
+  }
 
   void selectCategory(String category) {
     selectedCategory = category;
@@ -52,34 +58,40 @@ class HomeProvider with ChangeNotifier {
   List<Movie> continueWatchingMovies = [
     Movie(
         title: 'Wednesday',
-        imageUrl: 'assets/images/recommended_movie_1.png',
+        imageUrl: 'assets/images/continue_watching_movie_1.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 3'),
+        seasonName: 'Season - 1 | Episode - 3',
+        movieProgress: 0.7),
     Movie(
         title: 'Emily in Paris',
-        imageUrl: 'assets/images/recommended_movie_2.png',
+        imageUrl: 'assets/images/continue_watching_movie_2.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 5'),
+        seasonName: 'Season - 1 | Episode - 5',
+        movieProgress: 0.4),
     Movie(
         title: 'Wednesday',
-        imageUrl: 'assets/images/recommended_movie_1.png',
+        imageUrl: 'assets/images/continue_watching_movie_1.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 3'),
+        seasonName: 'Season - 1 | Episode - 3',
+        movieProgress: 0.4),
     Movie(
         title: 'Emily in Paris',
-        imageUrl: 'assets/images/recommended_movie_2.png',
+        imageUrl: 'assets/images/continue_watching_movie_2.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 5'),
+        seasonName: 'Season - 1 | Episode - 5',
+        movieProgress: 0.8),
     Movie(
         title: 'Wednesday',
-        imageUrl: 'assets/images/recommended_movie_1.png',
+        imageUrl: 'assets/images/continue_watching_movie_1.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 3'),
+        seasonName: 'Season - 1 | Episode - 3',
+        movieProgress: 0.7),
     Movie(
         title: 'Emily in Paris',
-        imageUrl: 'assets/images/recommended_movie_2.png',
+        imageUrl: 'assets/images/continue_watching_movie_2.png',
         hasEpisode: true,
-        seasonName: 'Season - 1 | Episode - 5'),
+        seasonName: 'Season - 1 | Episode - 5',
+        movieProgress: 0.4),
   ];
 
   List<Movie> recommendedMovies = [
